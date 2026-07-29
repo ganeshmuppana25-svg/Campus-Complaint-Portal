@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Registration</title>
+
+    <link rel="stylesheet" href="css/register.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="register-box">
+
+        <div class="logo">
+
+            <h1>🎓</h1>
+
+            <h2>Campus Complaint Portal</h2>
+
+            <p>Create Student Account</p>
+
+        </div>
+
+        <form id="registerForm">
+
+            <div class="input-group">
+
+                <label for="name">Full Name</label>
+
+                <input
+                    id="name"
+                    type="text"
+                    placeholder="Enter Full Name"
+                    autocomplete="name"
+                    required>
+
+            </div>
+
+            <div class="input-group">
+
+                <label for="studentId">Student ID</label>
+
+                <input
+                    id="studentId"
+                    type="text"
+                    placeholder="Enter Student ID"
+                    autocomplete="username"
+                    required>
+
+            </div>
+
+            <div class="input-group">
+
+                <label for="email">Email</label>
+
+                <input
+                    id="email"
+                    type="email"
+                    placeholder="Enter Email Address"
+                    autocomplete="email"
+                    required>
+
+            </div>
+
+            <div class="input-group">
+
+                <label for="phone">Phone Number</label>
+
+                <input
+                    id="phone"
+                    type="tel"
+                    placeholder="Enter Phone Number"
+                    autocomplete="tel"
+                    required>
+
+            </div>
+
+            <div class="input-group">
+
+                <label for="department">Department</label>
+
+                <input
+                    id="department"
+                    type="text"
+                    placeholder="Enter Department"
+                    required>
+
+            </div>
+
+            <div class="input-group">
+
+                <label for="year">Year</label>
+
+                <select id="year" required>
+
+                    <option value="">Select Year</option>
+                    <option>1st Year</option>
+                    <option>2nd Year</option>
+                    <option>3rd Year</option>
+                    <option>4th Year</option>
+
+                </select>
+
+            </div>
+
+            <div class="input-group">
+
+                <label for="password">Password</label>
+
+                <input
+                    id="password"
+                    type="password"
+                    placeholder="Create Password"
+                    autocomplete="new-password"
+                    required>
+
+            </div>
+
+            <div class="input-group">
+
+                <label for="confirmPassword">Confirm Password</label>
+
+                <input
+                    id="confirmPassword"
+                    type="password"
+                    placeholder="Confirm Password"
+                    autocomplete="new-password"
+                    required>
+
+            </div>
+
+            <div class="options">
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        onclick="togglePassword()">
+
+                    Show Passwords
+
+                </label>
+
+            </div>
+
+            <button type="submit">
+
+                📝 Register
+
+            </button>
+
+        </form>
+
+        <div class="links">
+
+            <p>
+
+                Already have an account?
+
+                <a href="login.html">
+
+                    Login
+
+                </a>
+
+            </p>
+
+            <a class="back-link" href="index.html">
+
+                ← Back to Home
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- SweetAlert2 -->
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="js/toast.js"></script>
+
+<script src="js/register.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Complaint</title>
+
+    <link rel="stylesheet" href="css/complaint.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="complaint-box">
+
+        <h1>📝 Submit Complaint</h1>
+
+        <!-- FIXED -->
+        <form id="complaintForm">
+
+            <div class="input-group">
+                <label>Category</label>
+
+                <select id="category" required>
+
+                    <option value="">Select Category</option>
+
+                    <option>Water Supply</option>
+                    <option>Electricity</option>
+                    <option>Cleanliness</option>
+                    <option>Classroom</option>
+                    <option>Laboratory</option>
+                    <option>Internet / Wi-Fi</option>
+                    <option>Washroom</option>
+                    <option>Library</option>
+                    <option>Transport</option>
+                    <option>Canteen</option>
+                    <option>Security</option>
+                    <option>Others</option>
+
+                </select>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Priority</label>
+
+                <select id="priority" required>
+
+                    <option value="">Select Priority</option>
+
+                    <option>High</option>
+                    <option>Medium</option>
+                    <option>Low</option>
+
+                </select>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Complaint Title</label>
+
+                <input
+                    id="title"
+                    type="text"
+                    placeholder="Enter Complaint Title"
+                    required>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Description</label>
+
+                <textarea
+                    id="description"
+                    rows="6"
+                    placeholder="Describe your complaint..."
+                    required></textarea>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Upload Image (Optional)</label>
+
+                <input
+                    id="image"
+                    type="file"
+                    accept="image/*">
+
+            </div>
+
+            <button type="submit">
+
+                Submit Complaint
+
+            </button>
+
+        </form>
+
+        <br>
+
+        <a href="dashboard.html">
+
+            ← Back to Dashboard
+
+        </a>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="js/toast.js"></script>
+<script src="js/complaint.js"></script>
+
+</body>
+</html>

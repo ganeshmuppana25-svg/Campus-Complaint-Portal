@@ -1,0 +1,91 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#2563eb,#1e3a8a);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:40px 0;
+}
+
+.container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+}
+
+.register-box{
+    width:450px;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(15px);
+    border-radius:20px;
+    padding:35px;
+    color:white;
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+.register-box h1{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.input-group{
+    margin-bottom:18px;
+}
+
+.input-group label{
+    display:block;
+    margin-bottom:6px;
+    font-weight:bold;
+}
+
+.input-group input,
+.input-group select{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+}
+
+.options{
+    margin-bottom:20px;
+}
+
+button{
+    width:100%;
+    padding:14px;
+    background:#ffd54f;
+    border:none;
+    border-radius:8px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{
+    background:white;
+}
+
+.register-box p{
+    margin-top:20px;
+    text-align:center;
+}
+
+.register-box a{
+    color:#ffd54f;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.register-box>a{
+    display:block;
+    text-align:center;
+    margin-top:15px;
+}

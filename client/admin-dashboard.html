@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admin Dashboard</title>
+
+<link rel="stylesheet" href="css/admin-dashboard.css">
+
+</head>
+<body>
+
+<div class="dashboard">
+
+    <h1>🎓 Campus Complaint Portal</h1>
+
+    <h2>Admin Dashboard</h2>
+
+    <div class="cards">
+
+        <div class="card total">
+            <h3>Total Complaints</h3>
+            <h1 id="total">0</h1>
+        </div>
+
+        <div class="card pending">
+            <h3>Pending</h3>
+            <h1 id="pending">0</h1>
+        </div>
+
+        <div class="card progress">
+            <h3>In Progress</h3>
+            <h1 id="progress">0</h1>
+        </div>
+
+        <div class="card resolved">
+            <h3>Resolved</h3>
+            <h1 id="resolved">0</h1>
+        </div>
+
+    </div>
+
+    <div class="actions">
+
+        <a href="admin-complaints.html">
+            Manage Complaints
+        </a>
+
+        <button id="logoutBtn">
+            Logout
+        </button>
+
+    </div>
+
+    <div class="chart-container">
+
+        <h2>Complaint Statistics</h2>
+
+        <canvas id="statusChart"></canvas>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script src="js/admin-dashboard.js"></script>
+
+</body>
+</html>

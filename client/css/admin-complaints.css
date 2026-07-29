@@ -1,0 +1,112 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+    padding:30px;
+}
+
+.container{
+    max-width:1400px;
+    margin:auto;
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+h1{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+#search{
+    width:100%;
+    padding:12px;
+    margin-bottom:20px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:#2563eb;
+    color:white;
+    padding:12px;
+}
+
+td{
+    padding:10px;
+    border-bottom:1px solid #ddd;
+    text-align:center;
+}
+
+tr:hover{
+    background:#f5f5f5;
+}
+
+select{
+    padding:6px;
+}
+
+button{
+    padding:7px 14px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    color:white;
+    background:#2563eb;
+}
+
+button:hover{
+    opacity:.9;
+}
+
+a{
+    text-decoration:none;
+    color:#2563eb;
+    font-weight:bold;
+}
+
+/* Modal */
+
+.modal{
+    display:none;
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.5);
+}
+
+.modal-content{
+    background:white;
+    width:600px;
+    margin:60px auto;
+    padding:25px;
+    border-radius:10px;
+    position:relative;
+}
+
+#closeModal{
+    position:absolute;
+    right:20px;
+    top:15px;
+    font-size:28px;
+    cursor:pointer;
+    color:red;
+}
+
+#complaintDetails p{
+    margin:12px 0;
+    line-height:1.6;
+}
