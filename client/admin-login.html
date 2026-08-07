@@ -20,7 +20,7 @@
 
         <div class="logo">
 
-            <h1>🛡️</h1>
+            <div class="logo-icon">🛡️</div>
 
             <h2>Campus Complaint Portal</h2>
 
@@ -32,67 +32,70 @@
 
             <div class="input-group">
 
-                <label for="username">
+                <label for="username">Username</label>
 
-                    Username
+                <div class="input-wrapper">
 
-                </label>
+                    <span class="input-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                    </span>
 
-                <input
+                    <input
+                        type="text"
+                        id="username"
+                        placeholder="Enter Admin Username"
+                        autocomplete="username"
+                        required>
 
-                    type="text"
-
-                    id="username"
-
-                    placeholder="Enter Admin Username"
-
-                    autocomplete="username"
-
-                    required>
+                </div>
 
             </div>
 
             <div class="input-group">
 
-                <label for="password">
+                <label for="password">Password</label>
 
-                    Password
+                <div class="input-wrapper">
 
-                </label>
+                    <span class="input-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                        </svg>
+                    </span>
 
-                <input
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter Password"
+                        autocomplete="current-password"
+                        required>
 
-                    type="password"
-
-                    id="password"
-
-                    placeholder="Enter Password"
-
-                    autocomplete="current-password"
-
-                    required>
+                </div>
 
             </div>
 
             <div class="options">
 
-                <label>
+                <label class="checkbox-label">
 
                     <input
-
                         type="checkbox"
-
                         onclick="togglePassword()">
 
-                    Show Password
+                    <span class="checkbox-text">Show Password</span>
 
                 </label>
 
             </div>
 
-            <button type="submit">
+            <button type="submit" class="btn-primary">
 
-                🔐 Admin Login
+                <span class="btn-icon">🔐</span>
+                <span>Admin Login</span>
 
             </button>
 
@@ -100,7 +103,7 @@
 
         <div class="links">
 
-            <a href="index.html">
+            <a class="back-link" href="index.html">
 
                 ← Back to Home
 
