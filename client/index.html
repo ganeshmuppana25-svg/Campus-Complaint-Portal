@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Campus Complaint Portal - A smart platform where students can register complaints, track progress and help improve the campus.">
     <title>Campus Complaint Portal</title>
 
     <link rel="stylesheet" href="css/style.css">
@@ -12,111 +13,543 @@
 <body>
 
     <!-- Navigation -->
+    <nav class="navbar" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="index.html" class="logo" aria-label="Campus Complaint Portal Home">
+                <span class="logo-icon" aria-hidden="true">🎓</span>
+                <span class="logo-text">Campus Complaint Portal</span>
+            </a>
 
-    <nav>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="hamburger" aria-hidden="true"></span>
+            </button>
 
-        <div class="logo">
-            🎓 Campus Complaint Portal
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#categories" class="nav-link">Categories</a></li>
+                <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-cta">
+                    <a href="login.html" class="btn btn-primary btn-sm">Student Login</a>
+                </li>
+                <li class="nav-cta">
+                    <a href="register.html" class="btn btn-outline btn-sm">Get Started</a>
+                </li>
+                <li class="nav-admin">
+                    <a href="admin-login.html" class="admin-link">
+                        <span class="admin-icon" aria-hidden="true">🛡️</span> Admin Login
+                    </a>
+                </li>
+            </ul>
         </div>
-
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="login.html">Student Login</a></li>
-            <li><a href="register.html">Register</a></li>
-            <li><a href="admin-login.html">Admin Login</a></li>
-            <li><a href="#about">About</a></li>
-        </ul>
-
     </nav>
 
-    <!-- Hero -->
-
-    <section class="hero">
-
-        <div class="hero-content">
-
-            <h1>Welcome to Campus Complaint Portal</h1>
-
-            <p>
-                A smart platform where students can register complaints,
-                track progress and help improve the campus.
-            </p>
-
-            <div class="hero-buttons">
-
-                <a href="login.html">
-                    <button>Student Login</button>
-                </a>
-
-                <a href="register.html">
-                    <button class="secondary-btn">Register</button>
-                </a>
-
-                <a href="admin-login.html">
-                    <button>Admin Login</button>
-                </a>
-
-            </div>
-
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg" aria-hidden="true">
+            <div class="floating-shape shape-1"></div>
+            <div class="floating-shape shape-2"></div>
+            <div class="floating-shape shape-3"></div>
+            <div class="floating-shape shape-4"></div>
+            <div class="hero-grid-overlay"></div>
         </div>
 
-    </section>
-
-    <!-- Features -->
-
-    <section class="features">
-
-        <h2>Our Features</h2>
-
-        <div class="cards">
-
-            <div class="card">
-                <h3>📝 Submit Complaint</h3>
-                <p>Submit complaints regarding hostel, transport, classrooms, labs and campus facilities.</p>
+        <div class="hero-container">
+            <div class="hero-content">
+                <span class="hero-badge reveal">✨ Smart Campus Solution</span>
+                <h1 class="reveal">Report Issues.<br>Track Progress.<br><span class="gradient-text">Improve Campus.</span></h1>
+                <p class="hero-subtitle reveal">
+                    A smart platform where students can register complaints,
+                    track progress and help improve the campus experience.
+                </p>
+                <div class="hero-buttons reveal">
+                    <a href="login.html" class="btn btn-primary btn-lg ripple-btn">
+                        <span class="btn-icon" aria-hidden="true">🔐</span> Student Login
+                    </a>
+                    <a href="register.html" class="btn btn-cyan btn-lg ripple-btn">
+                        <span class="btn-icon" aria-hidden="true">🚀</span> Get Started
+                    </a>
+                </div>
+                <div class="hero-trust reveal">
+                    <div class="trust-item">
+                        <span class="trust-icon" aria-hidden="true">⚡</span>
+                        <span>Fast Resolution</span>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-icon" aria-hidden="true">🔒</span>
+                        <span>Secure & Private</span>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-icon" aria-hidden="true">📊</span>
+                        <span>Real-time Tracking</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="card">
-                <h3>📊 Track Complaint</h3>
-                <p>Check the current status of your complaint anytime.</p>
+            <div class="hero-illustration reveal">
+                <div class="illustration-card">
+                    <div class="illustration-header">
+                        <span class="dot dot-red"></span>
+                        <span class="dot dot-yellow"></span>
+                        <span class="dot dot-green"></span>
+                    </div>
+                    <div class="illustration-body">
+                        <div class="illustration-icon" aria-hidden="true">📝</div>
+                        <h3>Complaint Submitted</h3>
+                        <p>Water Supply issue in Hostel Block B</p>
+                        <div class="progress-track">
+                            <div class="progress-fill"></div>
+                        </div>
+                        <div class="status-row">
+                            <span class="status-badge status-pending">In Progress</span>
+                            <span class="status-time">2h ago</span>
+                        </div>
+                    </div>
+                    <div class="illustration-footer">
+                        <div class="mini-stat">
+                            <span class="mini-stat-value">98%</span>
+                            <span class="mini-stat-label">Resolution Rate</span>
+                        </div>
+                        <div class="mini-stat">
+                            <span class="mini-stat-value">24h</span>
+                            <span class="mini-stat-label">Avg. Response</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="floating-card card-1" aria-hidden="true">
+                    <span class="floating-card-icon">✅</span>
+                    <div>
+                        <strong>Resolved</strong>
+                        <small>Complaint #1042</small>
+                    </div>
+                </div>
+                <div class="floating-card card-2" aria-hidden="true">
+                    <span class="floating-card-icon">📈</span>
+                    <div>
+                        <strong>+32%</strong>
+                        <small>This Month</small>
+                    </div>
+                </div>
             </div>
-
-            <div class="card">
-                <h3>👨‍💼 Admin Management</h3>
-                <p>Administrators can manage complaints efficiently and resolve issues quickly.</p>
-            </div>
-
         </div>
-
     </section>
 
-    <!-- About -->
+    <!-- Statistics Section -->
+    <section class="stats-section" aria-label="Platform statistics">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item reveal">
+                    <span class="stat-number" data-target="500">0</span>
+                    <span class="stat-plus">+</span>
+                    <span class="stat-label">Complaints Resolved</span>
+                </div>
+                <div class="stat-item reveal">
+                    <span class="stat-number" data-target="98">0</span>
+                    <span class="stat-percent">%</span>
+                    <span class="stat-label">Satisfaction Rate</span>
+                </div>
+                <div class="stat-item reveal">
+                    <span class="stat-number" data-target="24">0</span>
+                    <span class="stat-hours">h</span>
+                    <span class="stat-label">Avg. Response Time</span>
+                </div>
+                <div class="stat-item reveal">
+                    <span class="stat-number" data-target="12">0</span>
+                    <span class="stat-categories">+</span>
+                    <span class="stat-label">Complaint Categories</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Features</span>
+                <h2>Everything You Need to <span class="gradient-text">Resolve Issues</span></h2>
+                <p>Our platform provides a complete solution for reporting, tracking, and resolving campus complaints efficiently.</p>
+            </div>
+
+            <div class="cards">
+                <div class="card reveal">
+                    <div class="card-icon" aria-hidden="true">📝</div>
+                    <h3>Submit Complaint</h3>
+                    <p>Submit complaints regarding hostel, transport, classrooms, labs and campus facilities in just a few clicks.</p>
+                    <a href="login.html" class="card-link">Learn more <span aria-hidden="true">→</span></a>
+                </div>
+
+                <div class="card reveal">
+                    <div class="card-icon" aria-hidden="true">📊</div>
+                    <h3>Track Complaint</h3>
+                    <p>Check the current status of your complaint anytime with real-time updates and transparent progress tracking.</p>
+                    <a href="login.html" class="card-link">Learn more <span aria-hidden="true">→</span></a>
+                </div>
+
+                <div class="card reveal">
+                    <div class="card-icon" aria-hidden="true">👨‍💼</div>
+                    <h3>Admin Management</h3>
+                    <p>Administrators can manage complaints efficiently, prioritize issues, and resolve them quickly.</p>
+                    <a href="admin-login.html" class="card-link">Learn more <span aria-hidden="true">→</span></a>
+                </div>
+
+                <div class="card reveal">
+                    <div class="card-icon" aria-hidden="true">🔔</div>
+                    <h3>Instant Notifications</h3>
+                    <p>Get notified instantly when your complaint status changes or when action is required.</p>
+                    <a href="login.html" class="card-link">Learn more <span aria-hidden="true">→</span></a>
+                </div>
+
+                <div class="card reveal">
+                    <div class="card-icon" aria-hidden="true">📱</div>
+                    <h3>Mobile Friendly</h3>
+                    <p>Access the portal from any device with a fully responsive design optimized for mobile and tablet.</p>
+                    <a href="login.html" class="card-link">Learn more <span aria-hidden="true">→</span></a>
+                </div>
+
+                <div class="card reveal">
+                    <div class="card-icon" aria-hidden="true">🛡️</div>
+                    <h3>Secure & Private</h3>
+                    <p>Your data is protected with secure authentication and privacy-first design principles.</p>
+                    <a href="login.html" class="card-link">Learn more <span aria-hidden="true">→</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Categories</span>
+                <h2>Complaint <span class="gradient-text">Categories</span></h2>
+                <p>Choose from a wide range of categories to report your issue accurately.</p>
+            </div>
+
+            <div class="categories-grid">
+                <div class="category-item reveal">
+                    <span class="category-icon" aria-hidden="true">💧</span>
+                    <span class="category-name">Water Supply</span>
+                </div>
+                <div class="category-item reveal">
+                    <span class="category-icon" aria-hidden="true">⚡</span>
+                    <span class="category-name">Electricity</span>
+                </div>
+                <div class="category-item reveal">
+                    <span class="category-icon" aria-hidden="true">🧹</span>
+                    <span class="category-name">Cleanliness</span>
+                </div>
+                <div class="category-item reveal">
+                    <span class="category-icon" aria-hidden="true">🏫</span>
+                    <span class="category-name">Classroom</span>
+                </div>
+                <div class="category-item reveal">
+                    <span class="category-icon" aria-hidden="true">🔬</span>
+                    <span class="category-name">Laboratory</span>
+                </div>
+                <div class="category-item reveal">
+                    <span class="category-icon" aria-hidden="true">📶</span>
+                    <span class="category-name">Internet / Wi-Fi</span>
+                </div>
+                <div class="category-item reveal">
+                    <span class="category-icon" aria-hidden="true">🚻</span>
+                    <span class="category-name">Washroom</span>
+                </div>
+                <div class="category-item reveal">
+                    <span class="category-icon" aria-hidden="true">📚</span>
+                    <span class="category-name">Library</span>
+                </div>
+                <div class="category-item reveal">
+                    <span class="category-icon" aria-hidden="true">🚌</span>
+                    <span class="category-name">Transport</span>
+                </div>
+                <div class="category-item reveal">
+                    <span class="category-icon" aria-hidden="true">🍽️</span>
+                    <span class="category-name">Canteen</span>
+                </div>
+                <div class="category-item reveal">
+                    <span class="category-icon" aria-hidden="true">🛡️</span>
+                    <span class="category-name">Security</span>
+                </div>
+                <div class="category-item reveal">
+                    <span class="category-icon" aria-hidden="true">📦</span>
+                    <span class="category-name">Others</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">How It Works</span>
+                <h2>Get Started in <span class="gradient-text">4 Easy Steps</span></h2>
+                <p>From reporting to resolution, our streamlined process makes it simple.</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="timeline-number">1</div>
+                    <div class="timeline-content">
+                        <div class="timeline-icon" aria-hidden="true">👤</div>
+                        <h3>Create Account</h3>
+                        <p>Register with your student ID and create your secure account in minutes.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-number">2</div>
+                    <div class="timeline-content">
+                        <div class="timeline-icon" aria-hidden="true">📝</div>
+                        <h3>Submit Complaint</h3>
+                        <p>Choose a category, describe your issue, and submit your complaint.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-number">3</div>
+                    <div class="timeline-content">
+                        <div class="timeline-icon" aria-hidden="true">📊</div>
+                        <h3>Track Progress</h3>
+                        <p>Monitor the status of your complaint in real-time from your dashboard.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-number">4</div>
+                    <div class="timeline-content">
+                        <div class="timeline-icon" aria-hidden="true">✅</div>
+                        <h3>Get Resolution</h3>
+                        <p>Receive updates and confirmation once your issue is resolved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
     <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content reveal">
+                    <span class="section-tag">About Us</span>
+                    <h2>Building a Better <span class="gradient-text">Campus Community</span></h2>
+                    <p>
+                        The Campus Complaint Portal helps students communicate problems directly
+                        with the administration. Every complaint is tracked from submission
+                        to resolution, ensuring transparency and faster action.
+                    </p>
+                    <div class="about-points">
+                        <div class="about-point">
+                            <span class="check-icon" aria-hidden="true">✓</span>
+                            <span>Transparent complaint tracking</span>
+                        </div>
+                        <div class="about-point">
+                            <span class="check-icon" aria-hidden="true">✓</span>
+                            <span>Direct communication with administration</span>
+                        </div>
+                        <div class="about-point">
+                            <span class="check-icon" aria-hidden="true">✓</span>
+                            <span>Faster resolution times</span>
+                        </div>
+                        <div class="about-point">
+                            <span class="check-icon" aria-hidden="true">✓</span>
+                            <span>Improved campus facilities</span>
+                        </div>
+                    </div>
+                    <a href="register.html" class="btn btn-primary ripple-btn">Join Now</a>
+                </div>
+                <div class="about-illustration reveal">
+                    <div class="about-card">
+                        <div class="about-card-header">
+                            <span class="about-card-icon" aria-hidden="true">🏆</span>
+                            <h3>Our Mission</h3>
+                        </div>
+                        <p>
+                            To create a seamless channel between students and administration,
+                            ensuring every concern is heard, addressed, and resolved efficiently.
+                        </p>
+                        <div class="about-card-stats">
+                            <div class="about-stat">
+                                <strong>500+</strong>
+                                <span>Issues Solved</span>
+                            </div>
+                            <div class="about-stat">
+                                <strong>1000+</strong>
+                                <span>Active Students</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <h2>About Our Portal</h2>
-
-        <p>
-
-            The Campus Complaint Portal helps students communicate problems directly
-            with the administration. Every complaint is tracked from submission
-            to resolution, ensuring transparency and faster action.
-
-        </p>
-
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-box reveal">
+                <h2>Ready to Make a Difference?</h2>
+                <p>Join thousands of students who are improving their campus experience.</p>
+                <div class="cta-buttons">
+                    <a href="register.html" class="btn btn-white btn-lg ripple-btn">Get Started Now</a>
+                    <a href="login.html" class="btn btn-outline-light btn-lg ripple-btn">Student Login</a>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <span class="logo-icon" aria-hidden="true">🎓</span>
+                        <span>Campus Complaint Portal</span>
+                    </a>
+                    <p>A smart platform where students can register complaints, track progress and help improve the campus.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="Facebook"><span aria-hidden="true">📘</span></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><span aria-hidden="true">🐦</span></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><span aria-hidden="true">📸</span></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><span aria-hidden="true">💼</span></a>
+                    </div>
+                </div>
 
-    <footer>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#categories">Categories</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
 
-        <p>
+                <div class="footer-links">
+                    <h3>Access</h3>
+                    <ul>
+                        <li><a href="login.html">Student Login</a></li>
+                        <li><a href="register.html">Register</a></li>
+                        <li><a href="admin-login.html">Admin Login</a></li>
+                        <li><a href="dashboard.html">Student Dashboard</a></li>
+                        <li><a href="admin-dashboard.html">Admin Dashboard</a></li>
+                    </ul>
+                </div>
 
-            © 2026 Campus Complaint Portal |
-            Developed using HTML, CSS, JavaScript, Node.js & JSON
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><span aria-hidden="true">📍</span> Campus Administration Office</li>
+                        <li><span aria-hidden="true">📧</span> support@campusportal.edu</li>
+                        <li><span aria-hidden="true">📞</span> +91 12345 67890</li>
+                    </ul>
+                </div>
+            </div>
 
-        </p>
-
+            <div class="footer-bottom">
+                <p>© 2026 Campus Complaint Portal | Developed using HTML, CSS, JavaScript, Node.js & JSON</p>
+            </div>
+        </div>
     </footer>
+
+    <!-- Scroll to top button -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <span aria-hidden="true">↑</span>
+    </button>
+
+    <script>
+        // Mobile navigation toggle
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        navToggle.addEventListener('click', () => {
+            const isOpen = navLinks.classList.toggle('active');
+            navToggle.classList.toggle('active');
+            navToggle.setAttribute('aria-expanded', isOpen);
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                navToggle.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Scroll reveal animation
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // Animated counter for statistics
+        const statNumbers = document.querySelectorAll('.stat-number');
+
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = parseInt(entry.target.dataset.target);
+                    const duration = 2000;
+                    const start = performance.now();
+
+                    function updateCounter(currentTime) {
+                        const elapsed = currentTime - start;
+                        const progress = Math.min(elapsed / duration, 1);
+                        const eased = 1 - Math.pow(1 - progress, 3);
+                        entry.target.textContent = Math.floor(eased * target);
+                        if (progress < 1) {
+                            requestAnimationFrame(updateCounter);
+                        }
+                    }
+
+                    requestAnimationFrame(updateCounter);
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        statNumbers.forEach(el => counterObserver.observe(el));
+
+        // Scroll to top button
+        const scrollTopBtn = document.getElementById('scrollTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Navbar background on scroll
+        const navbar = document.querySelector('.navbar');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
 
 </body>
 
