@@ -29,6 +29,10 @@
     font-family: var(--font-family);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     min-height: 100vh;
     display: flex;
@@ -36,8 +40,10 @@ body {
     align-items: center;
     padding: 24px;
     background: linear-gradient(135deg, #0F172A 0%, #1E40AF 50%, #06B6D4 100%);
+    background-attachment: fixed;
     position: relative;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 body::before,
@@ -76,6 +82,7 @@ body::after {
     align-items: center;
     position: relative;
     z-index: 1;
+    padding: 16px 0;
 }
 
 .login-box {
@@ -89,17 +96,26 @@ body::after {
     text-align: center;
     animation: fadeUp 0.7s ease both;
     border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--ink);
 }
 
 .login-box .logo {
     margin-bottom: 28px;
 }
 
-.login-box .logo h1 {
-    font-size: 3rem;
-    margin-bottom: 8px;
+.logo-icon {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.4rem;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(6, 182, 212, 0.1) 100%);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(37, 99, 235, 0.15);
     animation: gentle-bounce 3s ease-in-out infinite;
-    display: inline-block;
+    box-shadow: 0 8px 24px rgba(37, 99, 235, 0.12);
 }
 
 .login-box .logo h2 {
@@ -130,9 +146,33 @@ body::after {
     font-size: 0.9rem;
 }
 
+.input-wrapper {
+    position: relative;
+}
+
+.input-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    color: var(--muted);
+    pointer-events: none;
+    transition: color var(--transition-fast);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
 .login-box input {
     width: 100%;
-    padding: 13px 16px;
+    padding: 13px 16px 13px 44px;
     margin-bottom: 0;
     border: 1.5px solid var(--border);
     border-radius: var(--radius-md);
@@ -148,8 +188,20 @@ body::after {
     background: var(--white);
 }
 
+.input-wrapper:focus-within .input-icon {
+    color: var(--primary);
+}
+
 .login-box input::placeholder {
     color: #94A3B8;
+}
+
+.login-box input:user-invalid {
+    border-color: #EF4444;
+}
+
+.login-box input:user-invalid:focus {
+    box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.12);
 }
 
 .options {
@@ -159,21 +211,30 @@ body::after {
     text-align: left;
 }
 
-.options label {
+.checkbox-label {
     display: flex;
     align-items: center;
     gap: 8px;
     cursor: pointer;
+    user-select: none;
 }
 
-.options input[type="checkbox"] {
+.checkbox-label input[type="checkbox"] {
     width: 16px;
     height: 16px;
     accent-color: var(--primary);
     cursor: pointer;
 }
 
-.login-box button {
+.checkbox-text {
+    transition: color var(--transition-fast);
+}
+
+.checkbox-label:hover .checkbox-text {
+    color: var(--primary);
+}
+
+.btn-primary {
     width: 100%;
     padding: 14px 16px;
     background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
@@ -187,18 +248,22 @@ body::after {
     box-shadow: 0 10px 24px rgba(37, 99, 235, 0.3);
     position: relative;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
 }
 
-.login-box button:hover {
+.btn-primary:hover {
     transform: translateY(-2px);
     box-shadow: 0 14px 32px rgba(37, 99, 235, 0.4);
 }
 
-.login-box button:active {
+.btn-primary:active {
     transform: translateY(0);
 }
 
-.login-box button::after {
+.btn-primary::after {
     content: '';
     position: absolute;
     top: 50%;
@@ -212,9 +277,13 @@ body::after {
     pointer-events: none;
 }
 
-.login-box button:active::after {
+.btn-primary:active::after {
     width: 300px;
     height: 300px;
+}
+
+.btn-icon {
+    font-size: 1.1rem;
 }
 
 .links {
@@ -265,8 +334,18 @@ body::after {
 }
 
 @media (max-width: 480px) {
+    body {
+        padding: 16px;
+    }
+
     .login-box {
         padding: 28px 24px;
+    }
+
+    .logo-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
     }
 }
 
