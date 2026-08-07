@@ -1,112 +1,149 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --danger: #dc2626;
+    --ink: #0f172a;
+    --muted: #64748b;
 }
 
-body{
-    background:#f4f6f9;
-    padding:30px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.container{
-    max-width:1400px;
-    margin:auto;
-    background:white;
-    padding:25px;
-    border-radius:10px;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
+body {
+    min-height: 100vh;
+    padding: 30px 20px;
+    background: linear-gradient(135deg, #f8fbff 0%, #eef4ff 45%, #f7f9fd 100%);
+    color: var(--ink);
 }
 
-h1{
-    text-align:center;
-    margin-bottom:20px;
+.container {
+    max-width: 1440px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.96);
+    padding: 28px;
+    border-radius: 24px;
+    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.1);
+    border: 1px solid rgba(37, 99, 235, 0.08);
+    animation: fadeUp 0.7s ease both;
 }
 
-#search{
-    width:100%;
-    padding:12px;
-    margin-bottom:20px;
-    border:1px solid #ccc;
-    border-radius:5px;
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--primary-dark);
 }
 
-table{
-    width:100%;
-    border-collapse:collapse;
+#search {
+    width: 100%;
+    padding: 13px 14px;
+    margin-bottom: 20px;
+    border: 1px solid #dbe4ff;
+    border-radius: 14px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-th{
-    background:#2563eb;
-    color:white;
-    padding:12px;
+#search:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.16);
 }
 
-td{
-    padding:10px;
-    border-bottom:1px solid #ddd;
-    text-align:center;
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    border-radius: 16px;
 }
 
-tr:hover{
-    background:#f5f5f5;
+th {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white;
+    padding: 13px;
+    text-align: center;
 }
 
-select{
-    padding:6px;
+td {
+    padding: 12px;
+    border-bottom: 1px solid #e2e8f0;
+    text-align: center;
+    color: #334155;
 }
 
-button{
-    padding:7px 14px;
-    border:none;
-    border-radius:5px;
-    cursor:pointer;
-    color:white;
-    background:#2563eb;
+tr:hover {
+    background: #f8fbff;
 }
 
-button:hover{
-    opacity:.9;
+select {
+    padding: 8px 10px;
+    border-radius: 10px;
+    border: 1px solid #dbe4ff;
 }
 
-a{
-    text-decoration:none;
-    color:#2563eb;
-    font-weight:bold;
+button {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    transition: transform 0.2s ease;
 }
 
-/* Modal */
-
-.modal{
-    display:none;
-    position:fixed;
-    left:0;
-    top:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,.5);
+button:hover {
+    transform: translateY(-2px);
 }
 
-.modal-content{
-    background:white;
-    width:600px;
-    margin:60px auto;
-    padding:25px;
-    border-radius:10px;
-    position:relative;
+a {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 700;
 }
 
-#closeModal{
-    position:absolute;
-    right:20px;
-    top:15px;
-    font-size:28px;
-    cursor:pointer;
-    color:red;
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.52);
+    z-index: 20;
 }
 
-#complaintDetails p{
-    margin:12px 0;
-    line-height:1.6;
+.modal-content {
+    background: white;
+    width: min(640px, 92%);
+    margin: 60px auto;
+    padding: 26px;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.16);
+    animation: popIn 0.25s ease;
+}
+
+#closeModal {
+    position: absolute;
+    right: 16px;
+    top: 12px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--danger);
+}
+
+#complaintDetails p {
+    margin: 12px 0;
+    line-height: 1.7;
+    color: var(--muted);
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popIn {
+    from { opacity: 0; transform: scale(0.96); }
+    to { opacity: 1; transform: scale(1); }
 }
