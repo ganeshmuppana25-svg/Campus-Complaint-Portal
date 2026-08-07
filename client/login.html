@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Login</title>
+
+    <link rel="stylesheet" href="css/login.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="login-box">
+
+        <div class="logo">
+
+            <h1>🎓</h1>
+
+            <h2>Campus Complaint Portal</h2>
+
+            <p>Student Login</p>
+
+        </div>
+
+        <form id="loginForm">
+
+            <div class="input-group">
+
+                <label for="studentId">Student ID</label>
+
+                <input
+                    id="studentId"
+                    type="text"
+                    placeholder="Enter Student ID"
+                    autocomplete="username"
+                    required>
+
+            </div>
+
+            <div class="input-group">
+
+                <label for="password">Password</label>
+
+                <input
+                    id="password"
+                    type="password"
+                    placeholder="Enter Password"
+                    autocomplete="current-password"
+                    required>
+
+            </div>
+
+            <div class="options">
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        onclick="togglePassword()">
+
+                    Show Password
+
+                </label>
+
+            </div>
+
+            <button type="submit">
+
+                🔐 Login
+
+            </button>
+
+        </form>
+
+        <div class="links">
+
+            <p>
+
+                Don't have an account?
+
+                <a href="register.html">
+
+                    Register
+
+                </a>
+
+            </p>
+
+            <a class="back-link" href="index.html">
+
+                ← Back to Home
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- SweetAlert2 -->
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="js/toast.js"></script>
+<script src="js/login.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Complaints</title>
+
+    <link rel="stylesheet" href="css/admin-complaints.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>📋 Manage Complaints</h1>
+
+    <input
+        type="text"
+        id="search"
+        placeholder="Search by Complaint ID, Student ID, Student Name or Category">
+
+    <table>
+
+        <thead>
+
+            <tr>
+                <th>Complaint ID</th>
+                <th>Student ID</th>
+                <th>Student Name</th>
+                <th>Category</th>
+                <th>Priority</th>
+                <th>Status</th>
+                <th>Date</th>
+                <th>View</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+
+        </thead>
+
+        <tbody id="complaintsTable">
+
+        </tbody>
+
+    </table>
+
+    <br>
+
+    <a href="admin-dashboard.html">
+        ← Back to Dashboard
+    </a>
+
+</div>
+
+<!-- Complaint Details Modal -->
+
+<div id="complaintModal" class="modal">
+
+    <div class="modal-content">
+
+        <span id="closeModal">&times;</span>
+
+        <h2>Complaint Details</h2>
+
+        <div id="complaintDetails"></div>
+
+    </div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="js/toast.js"></script>
+<script src="js/admin-complaints.js"></script>
+
+</body>
+</html>
